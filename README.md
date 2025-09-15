@@ -1,31 +1,28 @@
-# QA Automation Case Study
+# WorkFlow Pro - QA Automation Case Study
 
-**Stack:** Python 3.10+, PyTest, Selenium (Chrome), webdriver-manager, pytest-html
+This repository contains the QA Automation Case Study for **WorkFlow Pro**, a multi-tenant B2B SaaS platform.
 
-This repository is a sample QA Automation Case Study. It includes:
+## Features
 
-- Test plan and testing approach documentation
-- Selenium-based automated tests using Page Object Model
-- Test data separated in `test-data/`
-- Configs in `configs/`
-- PyTest fixtures and reporting
-- GitHub Actions CI workflow
+- Part 1: Debugging & fixing flaky Playwright tests
+- Part 2: Test framework design for web, mobile, API, multi-tenant SaaS
+- Part 3: API + UI integration test for project creation flow
+- CI/CD ready (GitHub Actions + BrowserStack integration)
 
----
+## Tech Stack
 
-## Prerequisites
-
-- Python 3.10+ installed
-- Chrome browser installed
-- (Optional) Git
-
----
+- **PyTest** — test runner
+- **Playwright** — web automation
+- **Requests** — API testing
+- **BrowserStack** — mobile & cross-browser execution
+- **PyYAML / JSON** — config & test data
 
 ## Setup
 
-1. Clone:
-
 ```bash
-git clone <repo-url>
-cd qa-automation-case-study
+git clone <repo>
+cd workflowpro-qa-automation
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```

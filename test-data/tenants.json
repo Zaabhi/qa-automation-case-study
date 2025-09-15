@@ -1,0 +1,12 @@
+{
+  "company1": {
+    "roles": {
+      "Admin": { "email": "admin@company1.com", "password": "password123" }
+    }
+  },
+  "company2": {
+    "roles": {
+      "Manager": { "email": "manager@company2.com", "password": "password123" }
+    }
+  }
+}

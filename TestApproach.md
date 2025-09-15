@@ -2,29 +2,33 @@
 
 ## Framework
 
-- PyTest for test runner and assertions
-- Selenium WebDriver for browser automation
-- Page Object Model (POM) for maintainability
+- PyTest for running tests
+- Playwright for web UI automation
+- Requests for API validation
+- BrowserStack for mobile & cross-browser testing
+- Page Object Model for maintainable UI tests
 
 ## Structure
 
-- `pages/` contains POM classes (one class per page)
-- `tests/` contains PyTest test modules
-- `test-data/` holds JSON data used by tests
-- `configs/` holds YAML config to control base_url and headless mode
+- `framework/` contains base classes (API, UI, mobile)
+- `pages/` contains Page Object classes
+- `tests/` contains test cases organized by functionality
+- `configs/` for YAML-based environment settings
+- `test-data/` JSON for user credentials & tenants
+
+## Config Management
+
+- Switch tenants via `X-Tenant-ID` header in API & `base_url` in config
+- Different roles (Admin/Manager/User) stored in test-data
 
 ## Reporting
 
-- pytest-html for an HTML report
-- CI will run tests and store artifacts
+- pytest-html for test reports
+- Artifacts uploaded in CI/CD
 
-## Data & Locators
+## Missing Questions
 
-- Test data in JSON files
-- Locators encapsulated in Page classes
-
-## Improvements / Future Work
-
-- Add API tests (requests or REST Assured)
-- Add cross-browser matrix (BrowserStack/SauceLabs)
-- Replace webdriver-manager with remote grid in CI for scalability
+1. Who provides test credentials (mock vs production-like)?
+2. Should test data cleanup happen automatically (delete projects after creation)?
+3. Do we need parallel execution?
+4. Do we need Allure/advanced reporting beyond HTML?

@@ -1,51 +1,37 @@
+---
+
+# 📝 2. TestPlan.md
+
 ```markdown
-# Test Plan
-
-## Objective
-
-Validate core functionality of the sample web application (login, checkout flow) via automation.
+# Test Plan - WorkFlow Pro
 
 ## Scope
 
-- Login: valid & invalid credentials
-- Checkout: basic flow (search, add to cart, proceed to checkout) — demo stub included
+- Login tests (multi-tenant users)
+- Project creation flow (API + UI + mobile)
+- Cross-browser and cross-platform validation
 
-## Out of scope
+## Out of Scope
 
-- Performance/load testing
-- Security testing
-- Accessibility testing
+- Performance & load testing
+- Advanced security testing
+- Full regression suite (this case study is scoped)
 
-## Test Strategy
+## Strategy
 
-- Automation for smoke & regression tests
-- Manual exploratory testing for UI/UX issues
+- Automate smoke & integration tests
+- Focus on cross-tenant isolation
+- Use API + UI combination for end-to-end coverage
 
-## Test Environment
+## Environments
 
-- Browser: Chrome (local)
-- OS: Developer machine / CI runner
-
-## Tools
-
-- Selenium (Python)
-- PyTest
-- webdriver-manager
-- pytest-html
-
-## Entry Criteria
-
-- Application URL is reachable
-- Test environment ready, dependencies installed
-
-## Exit Criteria
-
-- All critical tests pass
-- No blocking defects in tested flows
+- company1.workflowpro.com
+- company2.workflowpro.com
+- Staging APIs (with tokens provided)
 
 ## Deliverables
 
-- Test cases (in repo)
-- Automated scripts
-- Reports (HTML)
+- PyTest + Playwright automation repo
+- HTML test reports
+- CI/CD pipeline integration
 ```

@@ -1,5 +1,14 @@
-env: qa
-base_url: "https://opensource-demo.orangehrmlive.com" # example demo app; change as required
-browser: chrome
-headless: false
-implicit_wait: 5
+default_env: company1
+environments:
+  company1:
+    base_url: "https://company1.workflowpro.com"
+    tenant_id: "company1"
+    api_url: "https://api.workflowpro.com"
+    users:
+      admin: { "email": "admin@company1.com", "password": "password123" }
+  company2:
+    base_url: "https://company2.workflowpro.com"
+    tenant_id: "company2"
+    api_url: "https://api.workflowpro.com"
+    users:
+      manager: { "email": "manager@company2.com", "password": "password123" }
