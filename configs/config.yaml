@@ -1,0 +1,5 @@
+env: qa
+base_url: "https://opensource-demo.orangehrmlive.com" # example demo app; change as required
+browser: chrome
+headless: false
+implicit_wait: 5
